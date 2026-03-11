@@ -337,7 +337,7 @@ export default {
           }
           await client(true).rpc('vote_on_feature', {
             p_feature_id: feature.id,
-            p_vote_type: voteType,
+            p_vote: voteType === 'up' ? 1 : -1,
           });
           feature.user_vote = voteType;
         }
@@ -620,7 +620,7 @@ export default {
 
 .mfm-star--filled,
 .mfm-star--hover {
-  color: var(--mfm-accent);
+  color: var(--spread-accent, #CE6632);
 }
 
 .mfm-star:hover {
@@ -831,9 +831,9 @@ export default {
 }
 
 .mfm-vote-btn--up.mfm-vote-btn--active {
-  background: rgba(200, 106, 58, 0.1);
-  border-color: var(--mfm-accent);
-  color: var(--mfm-accent);
+  background: rgba(45, 106, 79, 0.12);
+  border-color: #2D6A4F;
+  color: #2D6A4F;
 }
 
 .mfm-vote-btn--down.mfm-vote-btn--active {
