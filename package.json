@@ -1,0 +1,12 @@
+{
+  "name": "member-feedback-modal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "weweb serve",
+    "build": "weweb build --name=member-feedback-modal --type=element"
+  },
+  "dependencies": {
+    "@weweb/cli": "latest"
+  }
+}
