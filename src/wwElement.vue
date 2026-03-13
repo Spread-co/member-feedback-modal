@@ -1,5 +1,5 @@
 <template>
-  <teleport to="body" v-if="isOpen">
+  <teleport to="body" v-if="isOpen && (!content.portalTarget || content.portalTarget === 'member')">
     <div class="mfm-overlay" @click.self="handleClose" role="dialog" aria-modal="true" aria-labelledby="mfm-title">
       <div class="mfm-panel">
 
