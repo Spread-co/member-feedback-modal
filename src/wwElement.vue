@@ -481,6 +481,10 @@ export default {
   }
 }
 
+@media (min-width: 1024px) {
+  .mfm-panel { max-width: 680px; }
+}
+
 /* ── Header ────────────────────────────────────────────────────────────── */
 .mfm-header {
   display: flex;
