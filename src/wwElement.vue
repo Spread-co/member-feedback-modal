@@ -856,4 +856,16 @@ export default {
 
 .mfm-vote-score--up   { color: var(--mfm-accent);  }
 .mfm-vote-score--down { color: var(--mfm-error);   }
+@media (max-width: 479px) {
+  .mfm-panel { max-width: 100%; border-radius: var(--mfm-radius-lg) var(--mfm-radius-lg) 0 0; }
+}
+@media (min-width: 480px) {
+  .mfm-overlay { padding: 1rem; }
+}
+@media (min-width: 768px) {
+  .mfm-panel { max-width: 560px; }
+}
+@media (min-width: 1280px) {
+  .mfm-panel { max-width: 720px; }
+}
 </style>
