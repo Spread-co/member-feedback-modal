@@ -6,7 +6,7 @@
         <!-- Header -->
         <div class="mfm-header">
           <h2 class="mfm-title" id="mfm-title">Have your say</h2>
-          <button class="mfm-close" @click="handleClose" aria-label="Close">
+          <button class="mfm-close" @click="handleClose" aria-label="Close" title="Close">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
             </svg>
@@ -146,6 +146,7 @@
                   @click="castVote(feature, 'up')"
                   :disabled="voteLoadingId === feature.id"
                   :aria-label="`Upvote: ${feature.title}`"
+                  :title="`Upvote: ${feature.title}`"
                   :aria-pressed="feature.user_vote === 'up'"
                 >
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
@@ -159,6 +160,7 @@
                   @click="castVote(feature, 'down')"
                   :disabled="voteLoadingId === feature.id"
                   :aria-label="`Downvote: ${feature.title}`"
+                  :title="`Downvote: ${feature.title}`"
                   :aria-pressed="feature.user_vote === 'down'"
                 >
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -868,4 +870,27 @@ export default {
 @media (min-width: 1280px) {
   .mfm-panel { max-width: 720px; }
 }
+
+/* ── Dark mode ─────────────────────────────────────────────────────── */
+:global(html.dark) .mfm-overlay { background: rgba(0,0,0,0.75); }
+:global(html.dark) .mfm-panel {
+  background: #18181b;
+  border-color: rgba(230, 216, 202, 0.12);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+}
+:global(html.dark) .mfm-panel__header { border-bottom-color: rgba(230,216,202,0.1); }
+:global(html.dark) .mfm-panel__title { color: #f5f0eb; }
+:global(html.dark) .mfm-panel__subtitle { color: rgba(230,216,202,0.6); }
+:global(html.dark) .mfm-panel__close { color: rgba(230,216,202,0.5); }
+:global(html.dark) .mfm-panel__close:hover { background: rgba(230,216,202,0.08); color: #f5f0eb; }
+:global(html.dark) .mfm-panel__label { color: rgba(230,216,202,0.7); }
+:global(html.dark) .mfm-panel__textarea { background: #160c11; border-color: rgba(230,216,202,0.2); color: #f5f0eb; }
+:global(html.dark) .mfm-panel__textarea::placeholder { color: rgba(230,216,202,0.3); }
+:global(html.dark) .mfm-panel__textarea:focus { border-color: #ce6632; box-shadow: 0 0 0 3px rgba(206,102,50,0.15); }
+:global(html.dark) .mfm-panel__rating-btn { background: #27272a; border-color: rgba(230,216,202,0.15); color: rgba(230,216,202,0.6); }
+:global(html.dark) .mfm-panel__rating-btn--selected { background: rgba(206,102,50,0.15); border-color: #ce6632; color: #ce6632; }
+:global(html.dark) .mfm-panel__footer { border-top-color: rgba(230,216,202,0.1); background: #18181b; }
+:global(html.dark) .mfm-panel__char-count { color: rgba(230,216,202,0.35); }
+:global(html.dark) .mfm-panel__success { color: #4ade80; }
+:global(html.dark) .mfm-panel__error { color: #f87171; }
 </style>
