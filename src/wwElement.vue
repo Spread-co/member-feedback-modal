@@ -879,12 +879,12 @@ export default {
   box-shadow: 0 24px 80px rgba(0,0,0,0.6);
 }
 :global(html.dark) .mfm-panel__header { border-bottom-color: rgba(230,216,202,0.1); }
-:global(html.dark) .mfm-panel__title { color: #f5f0eb; }
+:global(html.dark) .mfm-panel__title { color: #e6d8ca; }
 :global(html.dark) .mfm-panel__subtitle { color: rgba(230,216,202,0.6); }
 :global(html.dark) .mfm-panel__close { color: rgba(230,216,202,0.5); }
-:global(html.dark) .mfm-panel__close:hover { background: rgba(230,216,202,0.08); color: #f5f0eb; }
+:global(html.dark) .mfm-panel__close:hover { background: rgba(230,216,202,0.08); color: #e6d8ca; }
 :global(html.dark) .mfm-panel__label { color: rgba(230,216,202,0.7); }
-:global(html.dark) .mfm-panel__textarea { background: #160c11; border-color: rgba(230,216,202,0.2); color: #f5f0eb; }
+:global(html.dark) .mfm-panel__textarea { background: #160c11; border-color: rgba(230,216,202,0.2); color: #e6d8ca; }
 :global(html.dark) .mfm-panel__textarea::placeholder { color: rgba(230,216,202,0.3); }
 :global(html.dark) .mfm-panel__textarea:focus { border-color: #ce6632; box-shadow: 0 0 0 3px rgba(206,102,50,0.15); }
 :global(html.dark) .mfm-panel__rating-btn { background: #27272a; border-color: rgba(230,216,202,0.15); color: rgba(230,216,202,0.6); }
